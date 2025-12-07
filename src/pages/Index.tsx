@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
+import GallerySection from "@/components/GallerySection";
 import MediaSection from "@/components/MediaSection";
 import MapSection from "@/components/MapSection";
 import Footer from "@/components/Footer";
@@ -13,25 +14,25 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>الملفى - مخيم إماراتي أصيل | ALMELFA Camp</title>
+        <title>الملفى - مخيم إماراتي أصيل برأس الخيمة | ALMELFA Camp</title>
         <meta 
           name="description" 
-          content="مخيم الملفى - تجربة تخييم إماراتية أصيلة تجمع بين عراقة الماضي وراحة الحاضر. جلسات عربية، شواء، مدفئة، ومرافق متكاملة في قلب الطبيعة الصحراوية."
+          content="مخيم الملفى - تجربة تخييم إماراتية أصيلة في رأس الخيمة تجمع بين عراقة الماضي وراحة الحاضر. جلسات عربية، شواء، مدفئة، ومرافق متكاملة في قلب الطبيعة الصحراوية."
         />
-        <meta name="keywords" content="مخيم, الملفى, تخييم, إماراتي, صحراء, جلسات عربية, شواء, ALMELFA, camp, UAE, desert" />
+        <meta name="keywords" content="مخيم, الملفى, تخييم, إماراتي, صحراء, جلسات عربية, شواء, ALMELFA, camp, UAE, desert, رأس الخيمة, Ras Al Khaimah" />
         <meta name="author" content="مخيم الملفى" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="الملفى - مخيم إماراتي أصيل | ALMELFA Camp" />
-        <meta property="og:description" content="مخيم الملفى - تجربة تخييم إماراتية أصيلة تجمع بين عراقة الماضي وراحة الحاضر." />
+        <meta property="og:title" content="الملفى - مخيم إماراتي أصيل برأس الخيمة | ALMELFA Camp" />
+        <meta property="og:description" content="مخيم الملفى - تجربة تخييم إماراتية أصيلة في رأس الخيمة تجمع بين عراقة الماضي وراحة الحاضر." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:locale" content="ar_AE" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="الملفى - مخيم إماراتي أصيل" />
-        <meta name="twitter:description" content="تجربة تخييم إماراتية أصيلة تجمع بين عراقة الماضي وراحة الحاضر." />
+        <meta name="twitter:title" content="الملفى - مخيم إماراتي أصيل برأس الخيمة" />
+        <meta name="twitter:description" content="تجربة تخييم إماراتية أصيلة في رأس الخيمة تجمع بين عراقة الماضي وراحة الحاضر." />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -39,13 +40,13 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "مخيم الملفى - ALMELFA Camp",
-            "description": "مخيم إماراتي أصيل يقدم تجربة تخييم فريدة تجمع بين الأصالة والراحة",
+            "description": "مخيم إماراتي أصيل في رأس الخيمة يقدم تجربة تخييم فريدة تجمع بين الأصالة والراحة",
             "url": siteUrl,
             "telephone": "+971501234567", // REPLACE_PHONE
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "AE",
-              "addressRegion": "Dubai" // REPLACE_REGION
+              "addressRegion": "Ras Al Khaimah"
             },
             "geo": {
               "@type": "GeoCoordinates",
@@ -69,6 +70,7 @@ const Index = () => {
         <main>
           <HeroSection />
           <FeaturesSection />
+          <GallerySection />
           <MediaSection />
           <MapSection />
         </main>
