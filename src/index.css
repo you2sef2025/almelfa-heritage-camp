@@ -165,4 +165,100 @@
       transform: translateY(0);
     }
   }
+
+  /* Floating Animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+  }
+
+  /* Parallax Scroll Animation */
+  .parallax-slow {
+    will-change: transform;
+  }
+
+  /* Gradient Animation */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Pulse Glow */
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--accent) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--accent) / 0.6); }
+  }
+
+  /* Stars Twinkling */
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(var(--secondary)), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(var(--secondary) / 0.8), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(var(--accent)), transparent),
+      radial-gradient(2px 2px at 130px 80px, hsl(var(--secondary)), transparent),
+      radial-gradient(1px 1px at 160px 30px, hsl(var(--accent) / 0.8), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: twinkle 5s ease-in-out infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  /* Sand Dunes Wave */
+  .sand-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to right, 
+      hsl(var(--desert-sand)) 0%, 
+      hsl(var(--secondary) / 0.5) 50%, 
+      hsl(var(--desert-sand)) 100%
+    );
+    border-radius: 100% 100% 0 0;
+    animation: sandWave 10s ease-in-out infinite;
+  }
+
+  @keyframes sandWave {
+    0%, 100% { transform: translateX(-20px); }
+    50% { transform: translateX(20px); }
+  }
+
+  /* Reveal on Scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
